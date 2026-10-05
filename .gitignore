@@ -1,0 +1,30 @@
+# Caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Data and cached features
+*.parquet
+*.zip
+*.avi
+*.mp4
+ucf101/
+dl/
+
+# Generated results and model artefacts
+results.json
+results_smoke.json
+*.pt
+
+# anomaly_cascade: local test data (junction), caches, outputs, model files
+experimental/anomaly_cascade/test
+experimental/anomaly_cascade/test/
+*.npz
+*.mp4
+submission*.json
+manifest.json
+
+# secrets
+.env
+*.pem
+*.key
