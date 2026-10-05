@@ -1,0 +1,19 @@
+cmd: py -3.12 scripts/check_models.py   (torch 2.14.0+cpu, scikit-learn 1.9.0)
+Mon Oct  5 19:18:56 IST 2026
+TemporalTransformer(50 classes): 4,240,434 parameters
+  by part: {'enc': '4,205,568', 'head': '25,650'} cls+pos: 9,216
+  nhead=8, d_model=512, dim_feedforward=1024
+MLPClassifier(512) on 512-d input, 50 classes: 288,306 parameters
+ratio transformer / MLP: 14.7x
+
+smoke run on random features (accuracies are meaningless):
+  transformer fit/predict/bias_audit ok; keys: ['freq_acc_spearman', 'head_acc', 'head_minus_tail', 'macro', 'n_classes_scored', 'n_test_per_class'] ...
+  effective_number_weights ok, len 5
+model                   overall    macro     head     tail  zeros
+logistic                 0.2500   0.2500   0.5000   0.2500      2
+logistic_balanced        0.2500   0.2500   0.5000   0.2500      2
+mlp                      0.2000   0.2000   0.2500   0.0000      3
+mlp (sd over seeds)      0.0000   0.0000   0.0000   0.0000
+mlp zeros per seed     [3]
+  mean_pool_baselines ok
+exit 0

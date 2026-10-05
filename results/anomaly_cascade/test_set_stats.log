@@ -1,0 +1,4 @@
+cmd: count duration/frames of the local public test videos with OpenCV metadata
+Mon Oct  5 19:21:50 IST 2026
+34 videos, total duration 56.5 min, frames 75242, frames at 2 fps before duplicate skipping ~6782
+ground-truth rows 52 by level {'1': 24, '2': 20, '3': 8} videos 34

@@ -1,0 +1,13 @@
+cmd: cd experimental/anomaly_cascade && py -3.12 run_tests.py   (test/ = local copy of the 34-video public test set, not in the repo)
+Mon Oct  5 19:19:27 IST 2026
+Traceback (most recent call last):
+  File "D:\portfolio_v0\video-longtail\experimental\anomaly_cascade\run_tests.py", line 72, in <module>
+    main()
+  File "D:\portfolio_v0\video-longtail\experimental\anomaly_cascade\run_tests.py", line 35, in main
+    perfect = perfect_submission(gt)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\portfolio_v0\video-longtail\experimental\anomaly_cascade\run_tests.py", line 17, in perfect_submission
+    preds.append(make_video(vid, events))
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_video() missing 3 required positional arguments: 'frames_processed', 'chunks_processed', and 'internal_ms'
+exit 1

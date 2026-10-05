@@ -1,0 +1,9 @@
+cmd: cd experimental/anomaly_cascade && py -3.12 selftest.py   (test/ = local copy of the 34-video public test set, not in the repo)
+Mon Oct  5 19:19:27 IST 2026
+TEST perfect: {"level1": 1.0, "level2": 1.0, "level3": 1.0, "overall": 1.0}
+TEST all-empty: {"level1": 0.08333333333333333, "level2": 0.3333333333333333, "level3": 0.0, "overall": 0.13888888888888887}
+TEST fired-on-normal T001(L1) T029(L2): {"level1": 0.9791666666666667, "level2": 0.8333333333333334, "level3": 1.0, "overall": 0.9375}
+TEST emit rejections caught: 7 issues: ['X1: class_name normal is illegal, use events:[]', 'X1: bad class normal', 'X2: bad class not_a_class', 'X3: bad interval 10-0', 'X4: explanation length 5 out of 20-500', 'X1: duplicate', "ids not in manifest: {'X5'}"]
+TEST merge intervals: [('fire', 1.75, 5.25), ('fire', 12.25, 14.75), ('fire', 19.75, 21.25), ('smoke', 22.75, 24.25)]
+ALL LOCAL TESTS PASSED
+exit 0
